@@ -4,7 +4,7 @@ import {
   PhoneFilled,
   MailFilled,
   GithubFilled,
-  ZhihuCircleFilled,
+  UserOutlined,
   CheckCircleFilled,
   ScheduleFilled,
   EnvironmentFilled,
@@ -127,9 +127,7 @@ export const Template2: React.FC<Props> = props => {
               )}
               {profile?.zhihu && (
                 <div className="github">
-                  <ZhihuCircleFilled
-                    style={{ color: theme.color, opacity: 0.85 }}
-                  />
+                  <UserOutlined style={{ color: theme.color, opacity: 0.85 }} />
                   <span
                     style={{ cursor: 'pointer' }}
                     onClick={() => {
@@ -153,11 +151,11 @@ export const Template2: React.FC<Props> = props => {
           </div>
           {/* 头像 */}
           {!value?.avatar?.hidden && (
-            <Avatar
-              avatarSrc={value?.avatar?.src}
+            <div
+              // avatarSrc={value?.avatar?.src}
               className="avatar"
-              shape={value?.avatar?.shape}
-              size={value?.avatar?.size}
+              // shape={value?.avatar?.shape}
+              // size={value?.avatar?.size}
             />
           )}
         </div>

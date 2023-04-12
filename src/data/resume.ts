@@ -99,11 +99,11 @@ export const RESUME_INFO: ResumeConfig = {
       project_role: '',
       project_time: '',
       project_desc: [
-        '1. 团队内部并行的多个项目需要对图片资源进行压缩优化，并且各个项目的构建工具不同 (Webpack、Vite)',
-        '2. 希望对开发流程尽可能小的影响和接入成本',
+        '团队内部并行的多个项目需要对图片资源进行压缩优化，并且各个项目的构建工具不同 (Webpack、Vite)',
+        '希望对开发流程尽可能小的影响和接入成本',
       ],
       project_content: [
-        '1. 基于以上痛点，我通过unplugin 开发可以兼容 Webpack、Vite 的 tiny-image-plugin 工具，被团队内部多个项目接入。图片的压编率达到60%，让线上的 bundle 包体积减少30%',
+        '基于以上痛点，我通过 unplugin 开发可以兼容 Webpack、Vite 的 tiny-image-plugin 工具，被团队内部多个项目接入。图片的压缩率达到60%，让线上的 bundle 包体积减少30%',
       ],
     },
     {
@@ -111,7 +111,7 @@ export const RESUME_INFO: ResumeConfig = {
       project_role: '',
       project_time: '',
       project_desc: [
-        'Monaco editor 基于LSP 的语言服务需要通过JSON-RPC 协议与后端通信，目前采用接入 WebSocket 的方式，导致网络不稳定的环境下用户无法获得语言服务能力《代码补全等)',
+        'Monaco editor 基于LSP 的语言服务需要通过JSON-RPC 协议与后端通信，目前采用接入 WebSocket 的方式，导致网络不稳定的环境下用户无法获得语言服务能力(代码补全等)',
       ],
       project_content: [
         '我负责开发代码补全和语法检错模块，基于 Antlr4 编译工具，通过 AST 语法树计算用户当前输入位置的代码建议(不限于keyword，可以返回表名等) 和语法报错信息',
