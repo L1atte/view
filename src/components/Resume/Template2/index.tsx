@@ -71,7 +71,7 @@ export const Template2: React.FC<Props> = props => {
   const workList = _.get(value, 'workList');
 
   /** 自我介绍 */
-  const aboutme = _.split(_.get(value, ['aboutme', 'aboutme_desc']), '\n');
+  const aboutme = _.get(value, 'aboutme');
 
   return (
     <div className="template2-resume resume-content">
@@ -84,6 +84,26 @@ export const Template2: React.FC<Props> = props => {
                 <div className="mobile">
                   <PhoneFilled style={{ color: theme.color, opacity: 0.85 }} />
                   {profile.mobile}
+                </div>
+              )}
+              {profile?.workExpYear && (
+                <div className="work-exp-year">
+                  <ScheduleFilled
+                    style={{ color: theme.color, opacity: 0.85 }}
+                  />
+                  <span>
+                    <FormattedMessage id="工作经验" />: {profile.workExpYear}
+                  </span>
+                </div>
+              )}
+              {profile?.workPlace && (
+                <div className="work-place">
+                  <EnvironmentFilled
+                    style={{ color: theme.color, opacity: 0.85 }}
+                  />
+                  <span>
+                    <FormattedMessage id="年龄" />: {profile.workPlace}
+                  </span>
                 </div>
               )}
               {profile?.email && (
@@ -120,26 +140,7 @@ export const Template2: React.FC<Props> = props => {
                   </span>
                 </div>
               )}
-              {profile?.workExpYear && (
-                <div className="work-exp-year">
-                  <ScheduleFilled
-                    style={{ color: theme.color, opacity: 0.85 }}
-                  />
-                  <span>
-                    <FormattedMessage id="工作经验" />: {profile.workExpYear}
-                  </span>
-                </div>
-              )}
-              {profile?.workPlace && (
-                <div className="work-place">
-                  <EnvironmentFilled
-                    style={{ color: theme.color, opacity: 0.85 }}
-                  />
-                  <span>
-                    <FormattedMessage id="期望工作地" />: {profile.workPlace}
-                  </span>
-                </div>
-              )}
+
               {profile?.positionTitle && (
                 <div className="expect-job">
                   <HeartFilled style={{ color: theme.color, opacity: 0.85 }} />
@@ -223,15 +224,6 @@ export const Template2: React.FC<Props> = props => {
             })}
           </Wrapper>
         ) : null}
-        {/* <Wrapper
-          title={<FormattedMessage id="自我介绍" />}
-          className="section section-aboutme"
-          color={theme.color}
-        >
-          {aboutme.map((d, idx) => (
-            <div key={`${idx}`}>{d}</div>
-          ))}
-        </Wrapper> */}
         {/* 专业技能 */}
         {skillList?.length ? (
           <Wrapper
@@ -299,37 +291,50 @@ export const Template2: React.FC<Props> = props => {
             <div className="section section-project">
               {_.map(projectList, (project, idx) =>
                 project ? (
-                  <div className="section-item" key={idx.toString()}>
-                    <div className="section-info">
-                      <b className="info-name">
-                        {project.project_name}
-                        <span className="info-time">
-                          {project.project_time}
+                  <>
+                    <div className="section-item" key={idx.toString()}>
+                      <div className="section-info">
+                        <b className="info-name">
+                          {project.project_name}
+                          <span className="info-time">
+                            {project.project_time}
+                          </span>
+                        </b>
+                        {project.project_role && (
+                          <Tag color={theme.tagColor}>
+                            {project.project_role}
+                          </Tag>
+                        )}
+                      </div>
+                      <div className="section-detail">
+                        <span>
+                          {project.project_desc.length !== 0 ? (
+                            <FormattedMessage id="背景：" />
+                          ) : (
+                            ''
+                          )}
                         </span>
-                      </b>
-                      {project.project_role && (
-                        <Tag color={theme.tagColor}>{project.project_role}</Tag>
-                      )}
+                        {project.project_desc.map(i => (
+                          <div>
+                            <li>{i}</li>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="section-detail">
+                        <span>
+                          <FormattedMessage id="项目描述" />：
+                        </span>
+                        {project.project_content.map(i => (
+                          <div className="project-content">
+                            <li>{i}</li>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                    <div className="section-detail">
-                      <span>
-                        <FormattedMessage id="背景" />：
-                      </span>
-                      {project.project_desc.map(i => (
-                        <div>
-                          <li>{i}</li>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="section-detail">
-                      <span>
-                        <FormattedMessage id="主要工作" />：
-                      </span>
-                      <span className="project-content">
-                        {project.project_content}
-                      </span>
-                    </div>
-                  </div>
+                    <br />
+                    {/* <br /> */}
+                    {/* <p></p> */}
+                  </>
                 ) : null
               )}
             </div>
@@ -349,10 +354,10 @@ export const Template2: React.FC<Props> = props => {
                 return work ? (
                   <div className="section-item" key={idx.toString()}>
                     <div className="section-info">
-                      <b className="info-name">
+                      <div className="info-name company-name">
                         {work.company_name}
                         <span className="sub-info">{work.department_name}</span>
-                      </b>
+                      </div>
                       <span className="info-time">
                         {start}
                         {end ? ` ~ ${end}` : <FormattedMessage id=" 至今" />}
@@ -365,6 +370,15 @@ export const Template2: React.FC<Props> = props => {
             </div>
           </Wrapper>
         ) : null}
+        <Wrapper
+          title={<FormattedMessage id="自我介绍" />}
+          className="section section-aboutme"
+          color={theme.color}
+        >
+          {aboutme.aboutme_desc.map((d, idx) => (
+            <div key={`${idx}`}>{d}</div>
+          ))}
+        </Wrapper>
       </div>
     </div>
   );

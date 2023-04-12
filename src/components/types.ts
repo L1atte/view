@@ -67,7 +67,7 @@ export type ResumeConfig = {
     /** 描述 */
     project_desc?: string[];
     /** 项目内容，负责内容 */
-    project_content?: string;
+    project_content?: string[];
     /** 项目时间 */
     project_time?: string;
   }>;
@@ -98,7 +98,7 @@ export type ResumeConfig = {
 
   /** 自我介绍 */
   aboutme?: {
-    aboutme_desc: string;
+    aboutme_desc: string[];
   };
 
   /** 增加国际化 */
