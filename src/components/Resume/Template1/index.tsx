@@ -141,12 +141,8 @@ export const Template1: React.FC<Props> = props => {
             )}
             {profile?.workPlace && (
               <div className="work-place">
-                <EnvironmentFilled
-                  style={{ color: theme.color, opacity: 0.85 }}
-                />
-                <span>
-                  <FormattedMessage id="期望工作地" />: {profile.workPlace}
-                </span>
+                <MobileFilled style={{ color: theme.color, opacity: 0.85 }} />
+                {profile.workPlace}
               </div>
             )}
             {profile?.positionTitle && (

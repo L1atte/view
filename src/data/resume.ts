@@ -7,42 +7,41 @@ export const RESUME_INFO: ResumeConfig = {
     hidden: false,
   },
   profile: {
-    name: '姓名',
-    email: '736****86@qq.com',
-    mobile: '156********',
-    github: 'https://github.com/visiky',
-    zhihu: 'https://zhihu.com/people/visiky',
-    workExpYear: '',
-    workPlace: '浙江杭州',
-    positionTitle: '前端工程师',
+    name: '黄俊杰',
+    email: '邮箱：l4atte@gmail.com',
+    mobile: '电话：13250477305',
+    github: 'Github：https://github.com/L1atte',
+    zhihu: '个人博客：https://www.latte.space/',
+    workExpYear: '2年',
+    workPlace: '年龄：24岁',
   },
   educationList: [
     {
-      edu_time: ['2014.09.01', '2018.06.30'],
-      school: '华南理工大学',
-      major: '网络工程',
+      edu_time: ['2017.09', '2021.06'],
+      school: '华南师范大学',
+      major: '软件工程',
       academic_degree: '本科',
     },
   ],
-  awardList: [
-    {
-      award_info: '英语 CET6',
-      award_time: '2015',
-    },
-    {
-      award_info: '蚂蚁近卫军 卓越个人奖',
-      award_time: '2018.09',
-    },
-    {
-      award_info: '前端练习生 可视化讲师',
-      award_time: '2020.10',
-    },
-    {
-      award_info:
-        '前端早早聊 分享 “如何构思和开发开箱即用的可视化图表库 G2Plot”',
-      award_time: '2021.07',
-    },
-  ],
+  // awardList: [
+  //   {
+  //     award_info: '英语 CET6',
+  //     award_time: '2015',
+  //   },
+  //   {
+  //     award_info: '蚂蚁近卫军 卓越个人奖',
+  //     award_time: '2018.09',
+  //   },
+  //   {
+  //     award_info: '前端练习生 可视化讲师',
+  //     award_time: '2020.10',
+  //   },
+  //   {
+  //     award_info:
+  //       '前端早早聊 分享 “如何构思和开发开箱即用的可视化图表库 G2Plot”',
+  //     award_time: '2021.07',
+  //   },
+  // ],
   workExpList: [
     {
       company_name: '蚂蚁集团',
@@ -69,32 +68,42 @@ export const RESUME_INFO: ResumeConfig = {
     {
       skill_name: 'HTML 和 CSS',
       // '熟练掌握 html, css 等前端基础技术，不借助框架编写响应式/移动端网页',
-      skill_desc: '',
-      skill_level: 89,
+      skill_desc:
+        '熟悉 JavaScript 和 TypeScript，能完成常见的类型体操并掌握 TS 的高级概念',
     },
     {
       skill_name: 'TypeScript / JavaScript',
-      // skill_desc: '熟悉 TypeScript，丰富的 ts 项目经验',
-      skill_level: 90,
+      skill_desc: 'React 技术栈，熟悉 Concurrent Mode、渲染行为及 diff 算法',
     },
     {
       skill_name: '数据可视化',
-      skill_desc: '丰富的可视化工程实践以及开源经验',
-      skill_level: 90,
+      skill_desc:
+        'Vue 技术栈，阅读过部分 Vue 源码，了解 diff 算法、基本渲染流程、依赖收集原理等',
     },
     {
       skill_name: 'React / 前端工程化',
-      skill_desc: '大型前端项目经验以及组件库开发经验',
-      skill_level: 80,
+      skill_desc:
+        '熟悉 Vite、Rollup 和 Webpack 构建工具，有 plugin 的开发经验，了解构建流程',
+    },
+    {
+      skill_name: 'React / 前端工程化',
+      skill_desc:
+        '了解编译原理，有基于 Antlr 开发代码补全、语法检错功能和 Web IDE( Monaco )的开发经验',
+    },
+    {
+      skill_name: 'React / 前端工程化',
+      skill_desc: '了解网络协议、浏览器渲染流程，有一定的性能优化经验',
     },
   ],
   projectList: [
     {
-      project_name: '数据作战室',
-      project_role: '前端负责人',
-      project_time: '2019.04 - 2020.06',
-      project_desc:
-        '面向总裁和高管以及决策 BI 的数字化经营决策和管理协同产品。提供一站式的数据化经营决策和管理协同功能，让高管高效获取决策信息，并提升管理效率。',
+      project_name: '兼容 Webpack、Vite 的 tiny-image-plugin',
+      project_role: '',
+      project_time: '',
+      project_desc: [
+        '团队内部并行的多个项目需要对图片资源进行压缩优化，并且各个项目的构建工具不同 (Webpack、Vite)',
+        '希望对开发流程尽可能小的影响和接入成本',
+      ],
       project_content:
         '1. 项目从0到1的框架设计和开发 2. 产品体验精雕细琢的打磨 3. 建立稳定性保障机制。目前仍在迭代中，帮助提升高管业务决策效率',
     },
@@ -102,8 +111,9 @@ export const RESUME_INFO: ResumeConfig = {
       project_name: 'DeepInsight',
       project_role: '可视分析负责人',
       project_time: '2018.07 - 2019.04 / 2020.07 - 至今',
-      project_desc:
+      project_desc: [
         'DeepInsight 是蚂蚁集团自主研发的自助式 BI 数据洞察分析平台，面向企业分析人员、业务人员和开发人员，帮助蚂蚁集团实现精细化运营。',
+      ],
       project_content:
         'BI 平台工具核心部分是报表制作，也就是通过数据连接、可视化配置形成图表物料之后，通过拖拽方式进行页面编排，最终形成报表页面进行发布的过程。\n1. 主导开放能力建设，拉通产品、设计建设和扩展可视化图形，提升丰富度\n2. 产品体验优化，尤其是对 ECharts 的体验顽疾进行攻克\n3. 主导可视化能力建设：业务标准化图表库建设(通用组件设计和开发经验丰富)、促进数据分析能力增强等可视化一体化建设',
     },
@@ -111,8 +121,9 @@ export const RESUME_INFO: ResumeConfig = {
       project_name: 'G2、G2Plot',
       project_role: '核心开发者',
       project_time: '2019 - 至今',
-      project_desc:
+      project_desc: [
         'G2 是基于图形语法理论的可视化渲染引擎，G2Plot 是在 G2 基础上封装的开箱即用的统计可视化图表库',
+      ],
       project_content:
         'AntV 可视化建设，赋能整个蚂蚁和阿里集团统计可视化分析相关业务。负责 AntV 系列: AntV 官网、G 渲染引擎、 G2、G2Plot、ThemeSet 主题构建器等开源项目的研发工作。',
     },

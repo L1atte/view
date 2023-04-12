@@ -94,21 +94,26 @@ export const Template3: React.FC<Props> = props => {
         <div className="profile">
           {profile?.name && <div className="name">{profile.name}</div>}
           <div className="profile-list">
-            {profile?.mobile && (
-              <div className="mobile">
-                <PhoneFilled style={{ color: theme.color, opacity: 0.85 }} />
-                {profile.mobile}
+            {profile?.workPlace && (
+              <div className="work-place">
+                {profile?.workPlace && (
+                  <div className="email">{profile.workPlace}</div>
+                )}
               </div>
             )}
-            {profile?.email && (
-              <div className="email">
-                <MailFilled style={{ color: theme.color, opacity: 0.85 }} />
-                {profile.email}
+            {profile?.workExpYear && (
+              <div className="work-exp-year">
+                <span>
+                  <FormattedMessage id="工作经验" />: {profile.workExpYear}
+                </span>
               </div>
             )}
+            <div></div>
+            {profile?.mobile && <div className="mobile">{profile.mobile}</div>}
+            {profile?.email && <div className="email">{profile.email}</div>}
+            <div></div>
             {profile?.github && (
               <div className="github">
-                <GithubFilled style={{ color: theme.color, opacity: 0.85 }} />
                 <span
                   style={{ cursor: 'pointer' }}
                   onClick={() => {
@@ -119,11 +124,10 @@ export const Template3: React.FC<Props> = props => {
                 </span>
               </div>
             )}
+            <div></div>
+            <div></div>
             {profile?.zhihu && (
               <div className="github">
-                <ZhihuCircleFilled
-                  style={{ color: theme.color, opacity: 0.85 }}
-                />
                 <span
                   style={{ cursor: 'pointer' }}
                   onClick={() => {
@@ -134,24 +138,7 @@ export const Template3: React.FC<Props> = props => {
                 </span>
               </div>
             )}
-            {profile?.workExpYear && (
-              <div className="work-exp-year">
-                <ScheduleFilled style={{ color: theme.color, opacity: 0.85 }} />
-                <span>
-                  <FormattedMessage id="工作经验" />: {profile.workExpYear}
-                </span>
-              </div>
-            )}
-            {profile?.workPlace && (
-              <div className="work-place">
-                <EnvironmentFilled
-                  style={{ color: theme.color, opacity: 0.85 }}
-                />
-                <span>
-                  <FormattedMessage id="期望工作地" />: {profile.workPlace}
-                </span>
-              </div>
-            )}
+
             {profile?.positionTitle && (
               <div className="expect-job">
                 <HeartFilled style={{ color: theme.color, opacity: 0.85 }} />
@@ -225,15 +212,7 @@ export const Template3: React.FC<Props> = props => {
             })}
           </CardWrapper>
         ) : null}
-        <CardWrapper
-          title={<FormattedMessage id="自我介绍" />}
-          className="section section-aboutme"
-          color={theme.color}
-        >
-          {aboutme.map((d, idx) => (
-            <div key={`${idx}`}>{d}</div>
-          ))}
-        </CardWrapper>
+
         {/* 专业技能 */}
         {skillList?.length ? (
           <CardWrapper
@@ -367,6 +346,15 @@ export const Template3: React.FC<Props> = props => {
             )
           : null}
       </div>
+      <CardWrapper
+        title={<FormattedMessage id="自我介绍" />}
+        className="section section-aboutme"
+        color={theme.color}
+      >
+        {aboutme.map((d, idx) => (
+          <div key={`${idx}`}>{d}</div>
+        ))}
+      </CardWrapper>
     </div>
   );
 };
