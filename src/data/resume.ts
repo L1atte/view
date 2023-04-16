@@ -58,7 +58,7 @@ export const RESUME_INFO: ResumeConfig = {
     {
       company_name: '汕头超声研究所',
       department_name: '前端开发部',
-      work_time: ['2021.06', '2017.02'],
+      work_time: ['2021.06', '2022.02'],
       work_desc: '',
     },
   ],
@@ -107,8 +107,8 @@ export const RESUME_INFO: ResumeConfig = {
         'Monaco editor 基于LSP 的语言服务需要通过JSON-RPC 协议与后端通信，目前采用接入 WebSocket 的方式，导致网络不稳定的环境下用户无法获得语言服务能力(代码补全等)',
       ],
       project_content: [
-        '我负责开发代码补全和语法检错模块，基于 Antlr4 编译工具，通过 AST 语法树计算用户当前输入位置的代码建议(不限于keyword，可以返回表名等) 和语法报错信息',
-        'AST 的计算过程运行在 Web Worker 环境，尽可能地不阻塞主线程，从而避免影响性能',
+        '我负责开发代码补全和语法检错模块，基于 Antlr4 编译工具，通过 AST 语法树计算基于用户当前输入位置的代码建议(不限于keyword，可以返回表名等) 和语法报错信息',
+        '在 Web Worker 环境进行 AST 的计算，尽可能地不阻塞主线程，从而避免影响性能',
       ],
     },
     {
