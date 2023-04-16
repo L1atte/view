@@ -320,7 +320,7 @@ export const Template2: React.FC<Props> = props => {
                       </div>
                       <div className="section-detail">
                         <span>
-                          <FormattedMessage id="项目描述" />：
+                          <FormattedMessage id="解决方案" />：
                         </span>
                         {project.project_content.map(i => (
                           <div className="project-content">
@@ -329,9 +329,9 @@ export const Template2: React.FC<Props> = props => {
                         ))}
                       </div>
                     </div>
-                    <br />
                     {/* <br /> */}
-                    {/* <p></p> */}
+                    {/* <br /> */}
+                    <p></p>
                   </>
                 ) : null
               )}

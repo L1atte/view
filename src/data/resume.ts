@@ -71,12 +71,18 @@ export const RESUME_INFO: ResumeConfig = {
     },
     {
       skill_name: 'TypeScript / JavaScript',
-      skill_desc: 'React 技术栈，熟悉 Concurrent Mode、渲染行为及 diff 算法',
+      skill_desc:
+        'React 技术栈，熟悉 Concurrent Mode、渲染行为及 diff 算法，清楚',
     },
     {
       skill_name: '数据可视化',
       skill_desc:
         'Vue 技术栈，阅读过部分 Vue 源码，了解 diff 算法、基本渲染流程、依赖收集原理等',
+    },
+    {
+      skill_name: '数据可视化1',
+      skill_desc:
+        '熟悉常用前端数据管理的解决方案（如 Redux、Mobx、Jotai 等），并清楚它们的优劣和应用场景',
     },
     {
       skill_name: 'React / 前端工程化',
@@ -86,7 +92,7 @@ export const RESUME_INFO: ResumeConfig = {
     {
       skill_name: 'React / 前端工程化',
       skill_desc:
-        '了解编译原理，有基于 Antlr 开发代码补全、语法检错功能和 Web IDE( Monaco )的开发经验',
+        '了解编译原理，有基于 Antlr 开发代码补全、语法检错功能和 Web IDE（Monaco）的开发经验',
     },
     {
       skill_name: 'React / 前端工程化',
@@ -94,18 +100,6 @@ export const RESUME_INFO: ResumeConfig = {
     },
   ],
   projectList: [
-    {
-      project_name: '兼容 Webpack、Vite 的 tiny-image-plugin',
-      project_role: '',
-      project_time: '',
-      project_desc: [
-        '团队内部并行的多个项目需要对图片资源进行压缩优化，并且各个项目的构建工具不同 (Webpack、Vite)',
-        '希望对开发流程尽可能小的影响和接入成本',
-      ],
-      project_content: [
-        '基于以上痛点，我通过 unplugin 开发可以兼容 Webpack、Vite 的 tiny-image-plugin 工具，被团队内部多个项目接入。图片的压缩率达到60%，让线上的 bundle 包体积减少30%',
-      ],
-    },
     {
       project_name: '离线环境的 Web IDE 语言服务',
       project_role: '',
@@ -116,6 +110,18 @@ export const RESUME_INFO: ResumeConfig = {
       project_content: [
         '我负责开发代码补全和语法检错模块，基于 Antlr4 编译工具，通过 AST 语法树计算用户当前输入位置的代码建议(不限于keyword，可以返回表名等) 和语法报错信息',
         'AST 的计算过程运行在 Web Worker 环境，尽可能地不阻塞主线程，从而避免影响性能',
+      ],
+    },
+    {
+      project_name: '兼容 Webpack、Vite 的 tiny-image-plugin',
+      project_role: '',
+      project_time: '',
+      project_desc: [
+        '团队内部并行的多个项目需要对图片资源进行压缩优化，并且各个项目的构建工具不同 (Webpack、Vite)',
+        '希望对开发流程尽可能小的影响和接入成本',
+      ],
+      project_content: [
+        '基于以上痛点，我通过 unplugin 开发可以兼容 Webpack、Vite 的 tiny-image-plugin 工具，被团队内部多个项目接入。图片的压缩率达到60%，让线上的 bundle 包体积减少20%',
       ],
     },
     {
