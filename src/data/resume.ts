@@ -71,8 +71,7 @@ export const RESUME_INFO: ResumeConfig = {
     },
     {
       skill_name: 'TypeScript / JavaScript',
-      skill_desc:
-        'React 技术栈，熟悉 Concurrent Mode、渲染行为及 diff 算法，清楚',
+      skill_desc: 'React 技术栈，熟悉 Concurrent Mode、渲染行为及 diff 算法',
     },
     {
       skill_name: '数据可视化',
